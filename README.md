@@ -1,6 +1,13 @@
-# qpl2024
+# [QPL 2024](https://qpl2024.dc.uba.ar/)
 
-https://qpl2024.dc.uba.ar/
+## Introduction
+
+The 21st International Conference on Quantum Physics and Logic (QPL 2024) will take place from July 15th to 19th, 2024, at University of Buenos Aires.
+
+I was born in Buenos Aires and also studied at UBA. I'm a Bachelor in Computer Science and I'm excited to be part of this conference.
+
+This repository contains my Programming tool submission as requested in the call for papers:
+* https://qpl2024.dc.uba.ar/cfp.html
 
 ## Important dates
 
@@ -28,5 +35,4 @@ Most collaboration is done on GitHub including but not limited to the DisCoPy pr
 * https://github.com/xgi-org/xgi/issues/474
 * https://github.com/yaml/yaml-spec/issues/312
 * https://github.com/yaml/pyyaml/issues/757
-  * https://github.com/networkx/networkx/discussions/6808
-* 
+* https://github.com/networkx/networkx/discussions/6808
