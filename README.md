@@ -20,15 +20,21 @@ This repository contains my Programming tool submission as requested in the call
 
 ## Abstract
 
-The [DisCoCat] model has demonstrated its usefulness in a wide range of applications. The [DisCoPy] implementation has been presented several times in QPL conferences. [YAML] is a well established text format with a graph-based representation. [PyYAML] is the reference implementation with almost a million dependencies at the time of writing.
+The [DisCoCat] model has demonstrated its usefulness in a wide range of applications. The [DisCoPy] implementation has been presented several times in QPL conferences. [YAML] is a well established text format with a graph-based representation. [PyYAML] is the canonical implementation with almost a million dependencies at the time of writing.
 
 This work builds on DisCoPy and PyYAML to provide a production-ready programming environment and runtime for DisCoCat. We integrate state-of-the-art monoidal computing into standard developer tooling and provide a use case for Kubernetes resources.
 
 ## Introduction
 
-By using YAML we offer a cross-language compatibility layer with presence in all mainstream languages. 
+There is a gap between programming and computer science that has been steadily growing. Functional programming has many flavors to pick from, with lots of syntaxes and little industry adoption. The learning curve is steeper when a general programmer needs to learn syntax and semantics at the same time.
 
-Using familiar YAML-based syntax for computing with monoidal categories, integration with the UNIX environment .
+
+
+By using YAML we offer a cross-language compatibility layer with presence in all mainstream languages. With the possibility of writing a runtime in any language.
+
+Using familiar YAML-based syntax for computing with monoidal categories, we make it easier to pick up the new semantics. We also encapsulate many implementation details taking free categories instead of introducing reserved keywords.
+
+integration with the UNIX environment .
 
 To make this production-ready we integrate instead of rewriting, with a simple shell program that does graph rewriting.
 
@@ -40,7 +46,17 @@ My vision is a . E.g this tool can provide a formal alternative to kustomize or 
 
 I'm excited to bring category theory to the masses using YAML as a bridge.
 
-### Open-source work
+## Future work
+
+Explore Smalltalk design principles.
+
+Explore semagrams.jl as a code editing and navigation IDE.
+
+Code generation, transpilation, compilation.
+
+Compare with AlgebraicJulia, Lean 4, Statebox, as a foundation to build math and programs on. Explore Programs as Diagrams paper.
+
+## Open-source work
 
 This repository as well as all contributions are open-source published under CC0 license.
 
@@ -55,3 +71,4 @@ Most collaboration is done on GitHub including but not limited to the DisCoPy pr
 [DisCoCat]: https://arxiv.org/abs/1003.4394
 [DisCoPy]: https://arxiv.org/abs/2005.02975
 [YAML]: https://yaml.org/spec/1.2.2/
+[PyYAML]: https://github.com/yaml/pyyaml
