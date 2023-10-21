@@ -24,6 +24,19 @@ The [DisCoCat] model has demonstrated its usefulness in a wide range of applicat
 
 This work builds on DisCoPy and PyYAML to provide a production-ready programming environment and runtime for DisCoCat. We integrate state-of-the-art monoidal computing into standard developer tooling and provide a use case for Kubernetes resources.
 
+The key contributions to YAML:
+* `Node` to `NetworkX` digraph bijection
+* `NxComposer`: https://github.com/yaml/pyyaml/blob/main/lib/yaml/composer.py
+* `NxConstructor`: https://github.com/yaml/pyyaml/blob/main/lib/yaml/constructor.py
+* `NxRepresenter`: https://github.com/yaml/pyyaml/blob/main/lib/yaml/representer.py
+* `NxSerializer`: https://github.com/yaml/pyyaml/blob/main/lib/yaml/serializer.py
+
+While the bijection is an easy conversion, we notice the implementation can be improved by implementing the other four components using NetworkX.
+
+With this approach we replace the `nodes` library with NetworkX.
+
+To do: is it faster? backwards compatible?
+
 ## Introduction
 
 There is a gap between programming and computer science that has been steadily growing. Functional programming has many flavors to pick from, with lots of syntaxes and little industry adoption. The learning curve is steeper when a general programmer needs to learn syntax and semantics at the same time.
