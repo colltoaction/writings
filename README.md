@@ -35,7 +35,7 @@ While the bijection is an easy conversion, we notice the implementation can be i
 
 With this approach we replace the `nodes` library with NetworkX.
 
-To do: is it faster? backwards compatible?
+Note that these four classes and the two [LibYAML](https://pyyaml.org/wiki/LibYAML) ones make the PyYAML library use all fast, native libraries.
 
 ## Introduction
 
