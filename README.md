@@ -19,6 +19,9 @@ This repository contains my Programming tool submission as requested in the call
 > This consists of a 3-page description of a programming tool or framework, with a strong preference for open-source contributions.
 
 ## Abstract
+Signatures, specially multi-sorted, provide a framework to work with free categories. We define a novel mapping between a digraph and a multi-sorted signature using predecessors (successors) as the input (output) sorts.
+
+We use the YAML language and define signatures in terms of the current 1.2.2 revision. We develop a Python module and integrate with [DisCoPy] for further categorical composition.
 
 The [DisCoCat] model has demonstrated its usefulness in a wide range of applications. The [DisCoPy] implementation has been presented several times in QPL conferences. [YAML] is a well established text format with a graph-based representation. [PyYAML] is the canonical implementation with almost a million dependencies at the time of writing.
 
