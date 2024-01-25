@@ -1,11 +1,14 @@
 # Papers
+## String Diagrams
 * [An Introduction to String Diagrams for Computer Scientists](https://arxiv.org/abs/2305.08768)
 * [String Diagram Rewrite Theory I: Rewriting with Frobenius Structure](https://doi.org/10.48550/arXiv.2012.01847)
-* [Categorical logic and type theory](https://philpapers.org/rec/SEERBJ)
 * [A survey of graphical languages for monoidal categories](https://arxiv.org/abs/0908.3347)
 * [DisCoPy: Monoidal Categories in Python](https://arxiv.org/abs/2005.02975)
 * [Programs as Diagrams](https://arxiv.org/abs/2208.03817)
 * [Data-Parallel Algorithms for String Diagrams](https://arxiv.org/abs/2305.01041)
+## Category Theory
+* [A categorical approach to open and interconnected dynamical systems](https://arxiv.org/abs/1510.05076)
+* [Categorical logic and type theory](https://philpapers.org/rec/SEERBJ)
 
 # Talks
 * [GReTA seminar #10: "Hypergraph Rewriting and the Wolfram Model"](https://www.youtube.com/watch?v=TJ5RkdGObGE)

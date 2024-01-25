@@ -15,7 +15,13 @@ In this repository lives my work for Call for Papers:
 * Paper submission deadline: March 4, 2024
 
 ## Abstracts
-### [Open Hypergraphs in open-source](Open Hypergraphs in open-source.md)
+### Open Hypergraphs in open-source
+A survey of open-source String Diagrams and Hypergraphs.
+
+## Future work
+https://ncatlab.org/nlab/show/computational+trilogy
+### String Diagrams
+### Category Theory
 
 
 ## Open-source work

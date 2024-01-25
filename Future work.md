@@ -1,7 +1,5 @@
 ## Future work
 
-https://ncatlab.org/nlab/show/computational+trilogy
-
 Brendan Fong and John Baez have also been very influential in the Categorical Data Structures topic. Many of these papers[cite] provide the foundations for the ones presented in this work. Most offorts have been in the development of AlgebraicJulia.
 
 XGI and HyperNetX are oriented to network analysis. They provide more or less the same features but share no interfaces. Both use NetworkX as a base layer to build higher-order interactions upon.
