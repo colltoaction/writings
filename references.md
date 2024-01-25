@@ -5,6 +5,7 @@
 * [A survey of graphical languages for monoidal categories](https://arxiv.org/abs/0908.3347)
 * [DisCoPy: Monoidal Categories in Python](https://arxiv.org/abs/2005.02975)
 * [Programs as Diagrams](https://arxiv.org/abs/2208.03817)
+* [Data-Parallel Algorithms for String Diagrams](https://arxiv.org/abs/2305.01041)
 
 # Talks
 * [GReTA seminar #10: "Hypergraph Rewriting and the Wolfram Model"](https://www.youtube.com/watch?v=TJ5RkdGObGE)
