@@ -50,5 +50,7 @@ It is written as an object-oriented Python library.
 ## Conclusions
 This project evaluated hypergraph tooling in the open-source ecosystem. We found young academical implementations. We think it is key to foster collaboration between these open-source projects. The impact of each contribution can be multiplied by maintaining a single implementation. This kind of mature software will bring programmers and engineers closer to formal logic.
 
+This project evaluated hypergraph tooling in the Python ecosystem. We found two large scientific communities at this crossing. The Network Analysis community has two solid higher-order hypergraph libraries. The Categorical community has younger and more academical options oriented to string diagrams and rewriting.
+
 ## Acknowledgements
 Alexis Toumi and others in this thread: https://github.com/discopy/discopy/issues/250
