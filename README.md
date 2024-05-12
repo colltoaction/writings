@@ -1,3 +1,11 @@
+The journey continues on the Widip repo!
+
+> Wiring Diagram Processing:
+> Graphical programming with YAML on UNIX
+> https://github.com/colltoaction/widip
+
+---
+
 # QPL2024
 https://qpl2024.dc.uba.ar/
 
