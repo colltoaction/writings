@@ -16,9 +16,9 @@ The LISP Programming System [[McC]] modelled a similar framework for the AI grou
 It is straightforward to rethink the LISP graphically but users expect new tools to integrate with their environments including workstations and servers. This factor leads us to working with The UNIX Time-Sharing System [[RT]]. We will evaluate this solution with the Design Principles Behind Smalltalk [[Ing]] research on programming languages and user interfaces.
 
 ## Implementation
-We write the `widip` program, an interactive UNIX Shell. It is implemented in Python using the `discopy` and `pyyaml` packages. We use the YAML data language to model string diagrams and use the DisCoPy toolkit for computing [[FTC]] and drawing image files. The following is the `read-eval-print` diagram where the box named "widip" is our implementation:
+We write the `widip` program, an interactive UNIX Shell. It is implemented in Python using the `discopy` and `pyyaml` packages. We use the YAML data language to model string diagrams and use the DisCoPy toolkit for computing [[FTC]] and drawing image files. The following is the system diagram where the box named "widip" is our implementation:
 
-![rep](rep.jpg){width="50%"}
+![The system diagram](rep.jpg){width="80%"}
 
 The diagram above is the system as represented by the system. It is stored in a file with the following text:
 
