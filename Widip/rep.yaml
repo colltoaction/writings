@@ -1,6 +1,4 @@
-- !unix/read file: text
 - !pyyaml/parse text: representation graph
 - !widip representation graph: cospans of hypergraphs
 - !discopy/compute cospans of hypergraphs: string diagram
-- !discopy/draw string diagram: image
-- !unix/write image: file
+- !discopy/draw string diagram: image file

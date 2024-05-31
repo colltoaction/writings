@@ -13,26 +13,26 @@ In String Diagram Rewrite Theory [[BGK+]] we see _symbolic computation_ from a n
 
 The LISP Programming System [[McC]] modelled a similar framework for the AI group at MIT. An important decision was to define programs in the same class of symbolic expressions, as that "has advantages both as a programming language and as vehicles for developing a theory of computation".
 
-It is straightforward to rethink the LISP graphically but users expect new tools to integrate with their environments including workstations and servers. This factor leads us to working with The UNIX Time-Sharing System [[RT]]. We will evaluate this solution with the Design Principles Behind Smalltalk [[Ing]] research on programming languages and user interfaces.
-
 ## Implementation
-We write the `widip` program, an interactive UNIX Shell. It is implemented in Python using the `discopy` and `pyyaml` packages. We use the YAML data language to model string diagrams and use the DisCoPy toolkit for computing [[FTC]] and drawing image files. The following is the system diagram where the box named "widip" is our implementation:
+We implement the `widip` program with the `discopy` toolkit presented in DisCoPy: Monoidal Categories in Python [[FTC]]. In [[BGK+]] the authors present diagrams together with TeX equations and in [[FTC]] there is an imperative Python API. It is not clear how a system built around TeX or Python files can support a LISP-based approach. Two-dimensional diagrams present a challenge for the syntax design.
 
-![The system diagram](rep.jpg){width="80%"}
+We chose the YAML data language [[YAML]] to model such structures for several practical reasons but we will focus on the aspects that make it applicable to modelling diagrams. YAML is a popular data language that makes it possible to write friendly yet complex data structures made of recursive sequences, mappings and scalars. Documents are modelled as a Presentation Stream and an equivalent combinatorial structure called Representation Graph.
 
-The diagram above is the system as represented by the system. It is stored in a file with the following text:
+There is a straightforward transformation from the representation graph of a YAML document to Cospans of Hypergraphs. in Python using `discopy` for computing and drawing image files. In the following diagram the box named "widip" is our implementation:
+
+![The `widip` Python implementation diagram](rep.jpg){width="80%"}
+
+We find it remarkable that the equivalent Presentation Stream, namely the YAML document below, closely resembles the string diagram two-dimensional image. We believe this is evidence of the deep roots of the Equivalence along with the long-lasting contributions of LISP.
 
 ```yaml
-- !unix/read file: text
 - !pyyaml/parse text: representation graph
 - !widip representation graph: cospans of hypergraphs
 - !discopy/compute cospans of hypergraphs: string diagram
-- !discopy/draw string diagram: image
-- !unix/write image: file
+- !discopy/draw string diagram: image file
 ```
 
 ## Future work
-We would like to implement the Run language from Programs as Diagrams [[Pav]] as part of the Widip computing system. We are also interested in evaluating the Catlab package discussed in [[PSV]] for compiling to native code.
+We would like to implement the Run language from Programs as Diagrams [[Pav]] as part of the Widip computing system. We are also interested in the Catlab package discussed in [[PSV]] for compiling to native code.
 
 ## References
 * [[FTC]] Giovanni de Felice, Alexis Toumi, Bob Coecke. DisCoPy: Monoidal Categories in Python. EPTCS 333, 2021, pp. 183-197.
