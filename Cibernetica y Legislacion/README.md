@@ -9,5 +9,5 @@
 ## Generar PDF
 
 ```sh
-pandoc -t beamer Cibernetica\ y\ Legislacion.md -o Cibernetica\ y\ Legislacion.pdf
+pandoc Cibernetica\ y\ Legislacion.md -o Cibernetica\ y\ Legislacion.pdf
 ```
