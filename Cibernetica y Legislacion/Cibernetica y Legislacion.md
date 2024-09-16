@@ -6,7 +6,9 @@ En este informe presento mi análisis de los proyectos de regulación de la IA v
 
 # En general
 
-> Me han requerido que, dada la naturaleza acuciante de los problemas sociológicos y económicos de nuestra era de confusión, dedique una gran parte de mis energías a la exposición de este aspecto de la cibernética. Por mucho que simpatice con su actitud de urgencia ante la situación (...); no puedo compartir su esperanza de que sea posible lograr un progreso determinante en esa dirección capaz de ejercer un efecto terapéutico en las actuales enfermedades de nuestra sociedad. - _La Cibernética, Norbert Wiener (1947)_
+Los proyectos que leí me muestran la predisposición de esta comisión para abordar seriamente los desafíos de nuestra sociedad. Propongo avanzar rápidamente en proyectos de alfabetización en IA que alcancen a toda la población, de forma de insertar a nuestro país en la nueva economía global. Analizar esta cuestión no debe dilatar medidas urgentes.
+
+> Me han requerido que, dada la naturaleza acuciante de los problemas sociológicos y económicos de nuestra era de confusión, dedique una gran parte de mis energías a la exposición de la cibernética. (...) Lo mejor que podemos hacer es que el gran público comprenda la perspectiva y la importancia de este trabajo. - _La Cibernética, Norbert Wiener (1947)_
 
 La regulación propuesta resulta excesivamente amplia en sus objetivos, con diversas opiniones sobre el rol de la tecnología en la sociedad que exceden a la Inteligencia Artificial. Sin embargo, existe consenso en el rol transformador ya evidente de la IA. Esta visión común permitiría a esta comisión actuar rápidamente con proyectos que nos posicionen como referentes en esta tecnología emergente. Abordar la cuestión social merece una perspectiva integradora que la IA, como herramienta técnica, no ofrece. En este sentido la legislación en su conjunto debe adecuarse de acuerdo a las necesidades de la sociedad frente a la tecnología.
 
