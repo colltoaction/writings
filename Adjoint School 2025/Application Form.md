@@ -8,11 +8,11 @@ DEADLINE: Sunday, 1st December, 2024, 23:59 (anywhere on Earth).
 
 > Q: (~250 words) In place of a CV, write a short paragraph about your educational and/or professional background. Please mention your current occupation or position if you have one. This is your opportunity to brag about yourself!
 
-My passion is for computing in general, and every day I find new ways to get myself involved. I'm a Bachelor from University of Buenos Aires with a minor in Computer Engineering and a major in Computer Science.
+Free and Public Education is a part of Argentinian culture as big as dulce de leche and Maradona, and I'm grateful for the extraordinary opportunities my country has given me. I attended preparatory at National School of Buenos Aires, one of the most prestigious in Latin America and home of two Nobel laureates. I currently attend to University of Buenos Aires where I'm majoring in Computer Science.
 
-For more than ten years, while studying, I had full-time engineering jobs. I traveled to the U.S. for several internships at Google and Microsoft, but I decided to have a professional career in my home city and continue my Master's studies.
+I worked full-time jobs all my adult life, as most students here do. Early on I started a software engineering career which informs my views on real-life applications of science. As an advanced student I had four internships in the U.S, one at Google and three at Microsoft. When I was offered a permanent position I rejected it to settle in my home city. As I finished my Bachelor studies I moved on to senior roles in a startup and then a big company.
 
-Last year I decided to quit and focus on open, free research. I have recently developed open hardware definitions for reversible gates in FPGAs. I'm collaborating with hypergraph library authors in an interchange format that will bridge an existing gap in the scientist toolkit. In July I attended the Quantum Physics and Logic conference (QPL2025) and I'm taking an independent course on the same topic.
+This year has been the most challenging since I decided to quit and become an independent researcher. My goal is to found a science-oriented cooperative where researchers can be part of the traditional economy. I attend several seminars including Category Theory, Graph Theory and Quantum Logic and I also enjoy watching conferences on YouTube. I'm working towards a complete redesign of Computing, from physical gates and FPGAs to programming languages and diagrammatic reasoning.
 
 ## Describe your expectations for the Adjoint School
 
