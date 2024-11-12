@@ -18,7 +18,13 @@ This year has been the most challenging since I decided to quit and become an in
 
 > Q: (~250 words) For example: What would you like to get out of this school? How can this school help you in your career or research goals? What aspects of the school appeal most to you?
 
-I think this school is the best place to learn and develop the coming paradigms in computing. I wish to participate in lively debates with the most knowledgeable people and be an active participant in expanding the frontier of knowledge.
+Category Theory has reshaped my mind in the last years since I discovered it. I always had good intuition, pattern recognition and abstract reasoning abilities. Things like math and programming always made sense but I felt like they were lacking powerful mental models I had. Category Theory has given me these and many more tools that deeply influenced how I think. I hope to meet like-minded people who seek a unifying substrate for thought and communication.
+
+I'm excited for the opportunity to have expert mentors in fields such as Quantum Logic and Computing as well as Category Theory. I wish to work hand in hand, learning from them and talented peers. I wish to participate in lively debates and actively challenge my assumptions. I want to share my crazy ideas out loud and hear everyone's thoughts.
+
+I'm convinced Adjoint School 2025 will continue pushing the boundaries of knowledge and I want to be part of this group. This exposure would have a long-lasting impact in my academic opportunities. I hope the School would give me a large network I can continue working with in this line of research.
+
+Remote participation is a unique opportunity for me to join a long-term school with people from all over the world. I wish to get my peer's attention and foster a local experts hub. I also want to represent Argentina during the on-site conference and demonstrate our scientific capabilities.
 
 ## Describe what you think you could contribute to the Adjoint School
 
