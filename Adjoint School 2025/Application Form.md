@@ -8,15 +8,19 @@ DEADLINE: Sunday, 1st December, 2024, 23:59 (anywhere on Earth).
 
 > Q: (~250 words) In place of a CV, write a short paragraph about your educational and/or professional background. Please mention your current occupation or position if you have one. This is your opportunity to brag about yourself!
 
-I'm profoundly grateful for the extraordinary opportunities Argentina has given me with Free and Public Education policies. I attended preparatory at National School of Buenos Aires, one of the most prestigious in Latin America and home of two Nobel laureates. I currently attend University of Buenos Aires where I'm majoring in Computer Science.
+I want to thank the Argentinian People for supporting my education with Free and Public Education policies. I attended preparatory at National School of Buenos Aires, one of the most prestigious in Latin America and home of two Nobel laureates. I currently attend University of Buenos Aires where I'm majoring in Computer Science.
 
-I worked full-time jobs all my adult life, as most students here do. Early on I started a software engineering career which informs my views on real-life applications of science. As an advanced student I had four internships in the U.S, one at Google and three at Microsoft. When I was offered a permanent position I rejected it to settle in my home city. As I finished my Bachelor studies I moved on to senior roles in a startup and then a big company.
+Last year I finally became a researcher to focus on topics I care about. As a software engineer I was experiencing frustration from working with unfit tools. The more I learned Computer Science the more frustrated I became, as the gap between my mental models and the industry standards grew. At first I had a pet project and little time to study, but now I work full time on an ambitious project to develop a coherent computing stack. I'm applying Category Theory to compose systems ranging from physical gates in an FPGA to high-level programs using systems for diagrammatic reasoning. I attend several seminars including Category Theory, Graph Theory and Quantum Logic and I also learn from watching presentations such as Topos Colloquium and GReTA Seminar.
 
-This year has been the most challenging since I decided to quit and become an independent researcher. My goal is to found a science-oriented cooperative where researchers can be part of the traditional economy. I attend several seminars including Category Theory, Graph Theory and Quantum Logic and I also enjoy watching conferences on YouTube. I'm working towards a complete redesign of Computing, from physical gates and FPGAs to programming languages and diagrammatic reasoning.
+During my Bachelor studies I had four internships in the U.S, one at Google and three at Microsoft. I then settled in my home city where I had senior roles at a startup and then at a big company. Last year I resumed my Master's studies and shifted my attention to academia with the goal of producing knowledge and tools with a lasting impact.
 
 ## Describe your expectations for the Adjoint School
 
 > Q: (~250 words) For example: What would you like to get out of this school? How can this school help you in your career or research goals? What aspects of the school appeal most to you?
+
+I hope to meet people whot 
+
+transition from independent to collaboration.
 
 Category Theory has reshaped my mind in the last years since I discovered it. I always had good intuition, pattern recognition and abstract reasoning abilities. Things like math and programming always made sense but I felt like they were lacking powerful mental models I had. Category Theory has given me these and many more tools that deeply influenced how I think. I hope to meet like-minded people who seek a unifying substrate for thought and communication.
 
@@ -29,6 +33,8 @@ Remote participation is a unique opportunity for me to join a long-term school w
 ## Describe what you think you could contribute to the Adjoint School
 
 > Q: (~250 words) For example: What skills do you have that could be useful in the Adjoint School? Do you have experience in something that could complement other students well? Do you have any particular knowledge that could be interesting?
+
+contribute new tools to the whole science ecosystem with my CS superpowers
 
 In July I attended the Quantum Physics and Logic conference (QPL2024) and met many participants of previous Adjoint School editions. In preparation for this conference I have studied papers and presentations from many ACT authors, especially the GReTA Seminar and Topos Colloquium. My interaction with this community was very positive and I can bring the same collaborative spirit.
 
