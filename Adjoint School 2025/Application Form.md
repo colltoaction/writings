@@ -16,7 +16,7 @@ One such system I'm building is the HIF interchange format for Hypergraph Networ
 
 I attend several seminars including Category Theory, Graph Theory and Quantum Logic and I also learn much from online presentations such as Topos Colloquium and GReTA Seminar. I attended the Quantum Physics and Logic conference (QPL2024) where I met many knowledgeable participants including people from previous Adjoint School editions. I was fortunate to meet Federico Holik and other local students who invited me to join their seminar on Quantum Logic and Computing.
 
-During my Bachelor studies I had four internships in the U.S, one at Google and three at Microsoft. I then settled in my home city where I had senior roles at a startup and then at a big company. Last year I resumed my Master's studies and shifted my attention to academia with the goal of producing knowledge and tools with a lasting impact.
+During my Bachelor studies I had four internships in the U.S, one at Google and three at Microsoft. I worked in the Windows Photos application, in the Google Developer portal, and in the open-source .NET Framework Core. I was also a teaching assistant in Algorithms and in Digital Technology courses. Most recently I worked as a senior network engineer at Medallia but since then I've shifted my attention to my Master's studies and academia with the goal of producing knowledge and tools with a lasting impact.
 
 ## Describe your expectations for the Adjoint School
 
