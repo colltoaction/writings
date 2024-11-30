@@ -32,17 +32,11 @@ I will also use this opportunity to represent Argentina and demonstrate our scie
 
 > Q: (~250 words) For example: What skills do you have that could be useful in the Adjoint School? Do you have experience in something that could complement other students well? Do you have any particular knowledge that could be interesting?
 
-As a computing enthusiast I complement my studies in Computer Science with self-learning outside of the classroom. In July I attended the Quantum Physics and Logic conference (QPL2024) and met many participants of previous Adjoint School editions. In preparation for this conference I studied papers and presentations from many ACT authors, especially the GReTA Seminar and Topos Colloquium.
+As an Applied Category Theory enthusiast I complement my studies in Computer Science with self-learning outside of the classroom. I'm a big fan of the Computational Trilogy and the unified view of computing, logic and topology. This perspective helps me understand the relation between different topics and research fields that students bring to the School. I'm particularly interested in String Diagrams and Hypergraph Rewrite theory for categorical computing.
 
-I have experience in digital design and have started an open hardware project for FPGAs. I'm studying Classical Reversible Logic to gain expertise in aspects of Quantum Logic that are readily applicable, and I test my designs on the Argentinian Open Industrial Computer physical board.
+I have an applied mindset and often participate in the open-source ecosystem. I have experience in digital design and have started an open hardware project for FPGAs. I'm studying Classical Reversible Logic to gain expertise in aspects of Quantum Logic that are readily applicable, and I test my designs on the Argentinian Open Industrial Computer physical board.
 
-I'm particularly interested in the relation of String Diagrams and Hypergraphs. I find String Diagrams invaluable for reasoning and Hypergraphs for implementing powerful computing methods. Rewrite theory 
-
-I participate in the open-source ecosystem and I often share my knowledge with the public domain. I love giving technical presentations. I prepare well and speak confidently about the topics I know about. This is so fun to me that I would love to do it for the group.
-
-I wish to use these abilities and tools to complement the usual theoretical orientation of student groups.
-
-I promote collaboration across projects. As an example I'm currently developing a standard in collaboration with three well known hypergraph analysis libraries. My field experience would be very useful in the larger context of the School.
+I value community and I can be helpful in promoting the School's projects with a wider audience as well as motivating the study group with a cheerful attitude. I love giving technical presentations, writing blog posts and discussing in online forums.
 
 ## Which of the following best describes your approach to applied category theory (ACT)?
 I have an applied background and I am interested in category theory.
