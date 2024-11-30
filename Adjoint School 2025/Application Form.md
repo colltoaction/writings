@@ -22,17 +22,13 @@ During my Bachelor studies I had four internships in the U.S, one at Google and 
 
 > Q: (~250 words) For example: What would you like to get out of this school? How can this school help you in your career or research goals? What aspects of the school appeal most to you?
 
-I hope to meet people whot 
+Category Theory has reshaped my mind since I discovered it. I found powerful mental models and many more tools that deeply influenced how I think. I wish to continue developing in this area that I can only imagine will become more prominent in the scientific community. I want to complement my Computer Science education to build the tools that state-of-the-art research and development requires.
 
-transition from independent to collaboration.
+I'm excited to have expert mentors in fields such as Quantum and Category Theory that are not part of the curriculum. I wish to work in their research hand in hand, learning from them and my peers in the School. I would like to participate in lively debates and actively challenge my assumptions. I want to share my crazy ideas out loud and hear everyone's thoughts.
 
-Category Theory has reshaped my mind in the last years since I discovered it. I always had good intuition, pattern recognition and abstract reasoning abilities. Things like math and programming always made sense but I felt like they were lacking powerful mental models I had. Category Theory has given me these and many more tools that deeply influenced how I think. I hope to meet like-minded people who seek a unifying substrate for thought and communication.
+I hope the School will give me a valuable network I can work with afterwards. Remote participation is a unique opportunity for me to join a long-term group with people from all over the world. I believe the exposure of an Adjoint School participant has long-lasting impact in their career and it can be a solid foundation for growing in this area. This is key for me to transition from a self-learner and researcher to a productive collaborator.
 
-I'm excited for the opportunity to have expert mentors in fields such as Quantum Logic and Computing as well as Category Theory. I wish to work hand in hand, learning from them and talented peers. I wish to participate in lively debates and actively challenge my assumptions. I want to share my crazy ideas out loud and hear everyone's thoughts.
-
-I'm convinced Adjoint School 2025 will continue pushing the boundaries of knowledge and I want to be part of this group. This exposure would have a long-lasting impact in my academic opportunities. I hope the School would give me a large network I can continue working with in this line of research.
-
-Remote participation is a unique opportunity for me to join a long-term school with people from all over the world. I wish to get my peer's attention and foster a local experts hub. I also want to represent Argentina during the on-site conference and demonstrate our scientific capabilities.
+I will use this opportunity to represent Argentina and demonstrate our scientific capabilities. I wish to transfer my knowledge and foster a local experts hub that can be part of the global Applied Category Theory scene.
 
 ## Describe what you think you could contribute to the Adjoint School
 
