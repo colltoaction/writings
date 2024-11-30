@@ -24,11 +24,9 @@ Category Theory has reshaped my mind since I discovered it. I found powerful men
 
 I'm excited to have expert mentors in fields such as Quantum and Category Theory that are not part of the curriculum. I wish to work in their research hand in hand, learning from them and my peers in the School. I would like to participate in lively debates and actively challenge my assumptions. I want to share my crazy ideas out loud and hear everyone's thoughts.
 
-I hope the School will give me a valuable network I can work with afterwards. Remote participation is a unique opportunity for me to join a long-term group with people from all over the world. I believe the exposure of an Adjoint School participant has long-lasting impact in their career and it can be a solid foundation for growing in this area. This is key for me to transition from a self-learner and researcher to a productive collaborator.
+I hope the School will give me a valuable network I can work with afterwards. Remote participation is a unique opportunity for me to join a long-term group with people from all over the world. I believe the exposure of an Adjoint School participant has long-lasting impact in their career and it can be a solid foundation for growing in this area. This is key for me to transition from a self-learner and researcher to producing knowledge and tools with a lasting impact.
 
-I will use this opportunity to represent Argentina and demonstrate our scientific capabilities. I wish to transfer my knowledge and foster a local experts hub that can be part of the global Applied Category Theory scene.
-
-I wish to join this School My goal is producing knowledge and tools with a lasting impact.
+I will also use this opportunity to represent Argentina and demonstrate our scientific capabilities. I wish to share my knowledge and foster a local experts hub that can be part of the global Applied Category Theory scene.
 
 ## Describe what you think you could contribute to the Adjoint School
 
