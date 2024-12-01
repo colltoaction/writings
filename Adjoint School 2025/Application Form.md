@@ -41,7 +41,7 @@ I value community building and I can be helpful in promoting the School's projec
 ## Describe your background in category theory.
 > (~250 words) Please write about your background in category theory. For example: Are you new to category theory? If you read a book, say which one and what chapters; if you attended a course, say the topics that were covered; if you watched tutorials, say which ones. 
 
-I started learning Category Theory after a Functional Programming course where I was introduced to the topic. I realized I could use this knowledge to improve my day-to-day work and I started researching Free Categories as I was already familiar with graphs but quickly I fell in a rabbit hole.
+I learned Category Theory during a Functional Programming course and quickly realized it could improve my day-to-day work. I remember I started researching Free Categories as I was already familiar with graphs, but quickly I fell in a rabbit hole. 
 
 I spend much time reading and watching academic material that I have collected in reading lists, playlists and bibliography for my draft papers. I participate in a student group where I presented Diagrammatic Reasoning as seen in Pawel Sobocinski's graphical linear algebra blog. I believe this is the first video published in Spanish language in this area of applied category theory. My most important reference is "String Diagram rewrite theory I" from Bonchi et al.
 
@@ -54,7 +54,11 @@ I designed a programming system based on John McCarthy's "Recursive functions of
 
 I use DisCoPy to implement monoidal computation and I noticed there are many overlapping efforts. I reached out to hypergraph library authors and offered to collaborate. I was well received and joined their efforts to standardize a higher-order networks file format which I plan to extend with support for categorical structures, e.g hypergraph categories.
 
+I'm interested in modeling complex systems including applications to quantum and artificial intelligence where the features of category theory shine. I find that established theories are a mixture of many math branches not as fit to be productive as category theory. This field will revolutionize how we think and do science and I'm doing my part in this development.
+
 ## Briefly explain your Top Pick(s)
 > (~250 words) Why are they exciting? Why do you want to join? What do you think makes you a good fit for them?
 
 Structuring Quantum Effects with Monads and Arrows is my top pick because I'm most interested in applications of Category Theory to Quantum Computing. I think I can quickly ramp up in the mathematical aspects of this research group and support my peers with my computing experience. This study group will develop quantum computation models that I can enrich from my experience with monoidal computation using mainly DisCoPy.
+
+I currently participate in an independent Quantum Logic and Computing seminar where I'm going back to the fundamentals that I have glossed on my solo learning journey.
