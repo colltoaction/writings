@@ -20,19 +20,19 @@ I attend several seminars including Category Theory, Graph Theory and Quantum Lo
 
 > Q: (~250 words) For example: What would you like to get out of this school? How can this school help you in your career or research goals? What aspects of the school appeal most to you?
 
-Since I discovered Category Theory I have  found powerful mental models that deeply influence how I think. I wish to continue developing in this area that I can only imagine will become more prominent in science and engineering. I want to complement my Computer Science education to build the tools that state-of-the-art research and development requires.
+Since I discovered Category Theory I have incorporated powerful mental models that deeply influence how I think. I wish to continue developing in this area that I can only imagine will become more prominent in science and engineering. I want to complement my Computer Science education to build the tools that state-of-the-art research and development requires.
 
 I'm excited to have expert mentors in cutting-edge research that is not yet part of the university curriculum. I wish to work hand in hand, learning from them and my peers in the School. I would like to participate in lively debates and actively challenge my assumptions. I want to tell my crazy ideas out loud and hear everyone's reflections. I hope that I will have insightful thoughts to share as well.
 
 Remote participation is a unique opportunity for me to join a long-term learning seminar with people from all over the world. I believe the exposure of an Adjoint School participant has long-lasting impact in their career and it can be a solid foundation for growing in this area. Creating a peer network is key for me to transition from a self-learner to producing knowledge and tools with lasting impact.
 
-I also wish to represent Argentina both on-line and in-person and highlight our scientific capabilities. I wish to share acquired knowledge and foster a local experts hub that can be part of the global Applied Category Theory scene.
+I also wish to represent Argentina both on-line and in-person and highlight our scientific capabilities. I wish to share acquired knowledge and foster a local experts hub that can be part of the global applied category theory scene.
 
 ## Describe what you think you could contribute to the Adjoint School
 
 > Q: (~250 words) For example: What skills do you have that could be useful in the Adjoint School? Do you have experience in something that could complement other students well? Do you have any particular knowledge that could be interesting?
 
-As an applied category theory enthusiast I combine my studies in Computer Science with self-learning. I'm a big fan of the Computational Trilogy and the unified view of computing, logic and topology. This perspective helps me understand the different backgrounds students bring to the School. I'm particularly interested in String Diagrams and Hypergraph Rewrite theory for categorical computing and I presented at an independent study group. We encourage newcomers to participate and publish on video platforms for the benefit of everyone.
+As an applied category theory enthusiast I combine my studies in Computer Science with self-learning. I'm a big fan of the Computational Trilogy and the unified view of computing, logic and topology. This perspective helps me understand the different backgrounds students bring to the School. I'm particularly interested in String Diagrams and Hypergraph Rewrite theory for categorical computing.
 
 I have experience in digital design and have started an open hardware project for FPGAs. I'm studying Classical Reversible Logic to gain expertise in aspects of Quantum Logic that are readily applicable, and I test my designs on the Argentinian Open Industrial Computer. This effort can be applied to developing low-energy simulators and understanding key aspects of Quantum Advantage propositions.
 
