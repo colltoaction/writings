@@ -20,11 +20,11 @@ I attend several seminars including Category Theory, Graph Theory and Quantum Lo
 
 > Q: (~250 words) For example: What would you like to get out of this school? How can this school help you in your career or research goals? What aspects of the school appeal most to you?
 
-Category Theory has reshaped my mind since I discovered it. I found powerful mental models and many more tools that deeply influenced how I think. I wish to continue developing in this area that I can only imagine will become more prominent in the scientific community. I want to complement my Computer Science education to build the tools that state-of-the-art research and development requires.
+Category Theory has reshaped my mind since I discovered it. I found powerful mental models that deeply influence how I think. I wish to continue developing in this area that I can only imagine will become more prominent in the scientific community. I want to complement my Computer Science education to build the tools that state-of-the-art research and development requires.
 
-I'm excited to have expert mentors in fields such as Quantum and Category Theory that are not part of the curriculum. I wish to work in their research hand in hand, learning from them and my peers in the School. I would like to participate in lively debates and actively challenge my assumptions. I want to share my crazy ideas out loud and hear everyone's thoughts.
+I'm excited to have expert mentors in cutting-edge Quantum and Category Theory that are not yet part of the university curriculum. I wish to work in their research hand in hand, learning from them and my peers in the School. I would like to participate in lively debates and actively challenge my assumptions. I want to share my crazy ideas out loud and hear everyone's thoughts.
 
-I hope the School will give me a valuable network I can work with afterwards. Remote participation is a unique opportunity for me to join a long-term group with people from all over the world. I believe the exposure of an Adjoint School participant has long-lasting impact in their career and it can be a solid foundation for growing in this area. This is key for me to transition from a self-learner and researcher to producing knowledge and tools with a lasting impact.
+I hope the School will give me a valuable network I can engage with afterwards. Remote participation is a unique opportunity for me to join a long-term group with people from all over the world. I believe the exposure of an Adjoint School participant has long-lasting impact in their career and it can be a solid foundation for growing in this area. This is key for me to transition from a self-learner and researcher to producing knowledge and tools with a lasting impact.
 
 I will also use this opportunity to represent Argentina and demonstrate our scientific capabilities. I wish to share my knowledge and foster a local experts hub that can be part of the global Applied Category Theory scene.
 
@@ -32,9 +32,9 @@ I will also use this opportunity to represent Argentina and demonstrate our scie
 
 > Q: (~250 words) For example: What skills do you have that could be useful in the Adjoint School? Do you have experience in something that could complement other students well? Do you have any particular knowledge that could be interesting?
 
-As an Applied Category Theory enthusiast I complement my studies in Computer Science with self-learning outside of the classroom. I'm a big fan of the Computational Trilogy and the unified view of computing, logic and topology. This perspective helps me understand the relation between different topics and research fields that students bring to the School. I'm particularly interested in String Diagrams and Hypergraph Rewrite theory for categorical computing.
+As an applied category theory enthusiast I combine my studies in Computer Science with self-learning. I'm a big fan of the Computational Trilogy and the unified view of computing, logic and topology. This perspective helps me understand the relation between different topics that students bring to the School. I'm particularly interested in String Diagrams and Hypergraph Rewrite theory for categorical computing and I presented these topics at a student study group. We also record these meetings and you can find us on video platforms.
 
-I have an applied mindset and often participate in the open-source ecosystem. I have experience in digital design and have started an open hardware project for FPGAs. I'm studying Classical Reversible Logic to gain expertise in aspects of Quantum Logic that are readily applicable, and I test my designs on the Argentinian Open Industrial Computer physical board.
+I have an practical mindset and often contribute code and written material to the public domain. I have experience in digital design and have started an open hardware project for FPGAs. I'm studying Classical Reversible Logic to gain expertise in aspects of Quantum Logic that are readily applicable, and I test my designs on the Argentinian Open Industrial Computer physical board.
 
 I value community and I can be helpful in promoting the School's projects with a wider audience as well as motivating the study group with a cheerful attitude. I love giving technical presentations, writing blog posts and discussing in online forums.
 
