@@ -14,8 +14,6 @@ Most recently I worked as a senior engineer at Medallia where I confirmed the bi
 
 One component is the HIF interchange format for Network Science I'm building with Cliff Joslyn and a team of higher-order network libraries including XGI, HyperNetX and HypergraphX. This work sets up a robust framework for collaboration and we expect to present it in the NetSci2025 conference.
 
-I attend several seminars including Category Theory, Graph Theory and Quantum Logic and I also learn much from online presentations such as Topos Colloquium and GReTA Seminar. I attended the Quantum Physics and Logic conference (QPL2024) where I met many knowledgeable participants including people from previous Adjoint School editions. I was fortunate to meet Federico Holik and other local students who invited me to join their seminar on Quantum Logic and Computing.
-
 ## Describe your expectations for the Adjoint School
 
 > Q: (~250 words) For example: What would you like to get out of this school? How can this school help you in your career or research goals? What aspects of the school appeal most to you?
@@ -41,11 +39,11 @@ I value community building and I can be helpful in promoting the School's projec
 ## Describe your background in category theory.
 > (~250 words) Please write about your background in category theory. For example: Are you new to category theory? If you read a book, say which one and what chapters; if you attended a course, say the topics that were covered; if you watched tutorials, say which ones. 
 
-I learned Category Theory during a Functional Programming course and quickly realized it could improve my day-to-day work. I remember I started researching Free Categories as I was already familiar with graphs, but quickly I fell in a rabbit hole. 
+I learned Category Theory during a Functional Programming course and realized it could improve my day-to-day work. I remember I started researching Free Categories as I was already familiar with graphs, but I quickly fell in a rabbit hole. My friend gave me "Category Theory for the Sciences" by David Spivak which I read several times. I studied categorical logic, higher category theory, dependent types, and other topics before I found string diagrams. This turned out to be key for implementing my ideas and I have since focused on its computational aspects.
 
-I spend much time reading and watching academic material that I have collected in reading lists, playlists and bibliography for my draft papers. I participate in a student group where I presented Diagrammatic Reasoning as seen in Pawel Sobocinski's graphical linear algebra blog. I believe this is the first video published in Spanish language in this area of applied category theory. My most important reference is "String Diagram rewrite theory I" from Bonchi et al.
+I attend several seminars including Category Theory, Graph Theory and Quantum Logic and I also learn much from online presentations such as Topos Colloquium and GReTA Seminar. I have collected reading lists, playlists and bibliography for reference. I participate in a student group where I presented Diagrammatic Reasoning as seen in Pawel Sobocinski's graphical linear algebra blog. I believe this is the first video published in Spanish language in this area of applied category theory. My most important reference is "String Diagram rewrite theory I" by Bonchi et al.
 
-Some of my favorite tutorials include "Chyp: Composing Hypergraphs, Proving Theorems" by Aleks Kissinger and "DisCoPy demonstration" by Alexis Toumi. Seminars include "Compositional Modeling with Decorated Cospans" by John Baez and "Hypergraph Rewriting and the Wolfram Model" by Jonathan Gorard.
+Some of my favorite tutorials include "Chyp: Composing Hypergraphs, Proving Theorems" by Aleks Kissinger and "DisCoPy demonstration" by Alexis Toumi. These have been insightful presentations and the software implementations very robust. I also watch seminar presentations like "Compositional Modeling with Decorated Cospans" by John Baez and "Hypergraph Rewriting and the Wolfram Model" by Jonathan Gorard.
 
 ## Describe you interest in applied category theory.
 > (~250 words) Have you tried applying category theory to your domain of interest? If so, how and where (a project, a class, a paper)?  If not, talk about your favorite topic in category theory, a connection between category theory and your domain field, or your interest in one of the projects.
@@ -61,4 +59,4 @@ I'm interested in modeling complex systems including applications to quantum and
 
 Structuring Quantum Effects with Monads and Arrows is my top pick because I'm most interested in applications of Category Theory to Quantum Computing. I think I can quickly ramp up in the mathematical aspects of this research group and support my peers with my computing experience. This study group will develop quantum computation models that I can enrich from my experience with monoidal computation using mainly DisCoPy.
 
-I currently participate in an independent Quantum Logic and Computing seminar where I'm going back to the fundamentals that I have glossed on my solo learning journey.
+I attended the Quantum Physics and Logic conference (QPL2024) where I met many knowledgeable participants including people from previous Adjoint School editions. I was fortunate to meet Federico Holik who invited me to join his seminar on Quantum Logic and Computing where I'm going back to the fundamentals that I have glossed on my solo learning journey. During the conference I gained insights into the most recent research that physicists, mathematicians and computer scientists are working on.
