@@ -6,3 +6,9 @@ This repository contains plain-text sources for presentations, papers and other 
 
 # Free as in freedom
 This repository is shared under CC0 and for the benefit of everyone.
+
+# LaTeX packages
+## Ubuntu
+```sh
+sudo apt install texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-xetex
+```
