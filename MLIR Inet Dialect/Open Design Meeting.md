@@ -12,45 +12,72 @@ date:
 
 # Abstract
 
-Interaction nets (Lafont, 1990) generalize turing machines, cellular automata.
-A programming paradigm for deterministic distributed computation. Inet dialect is a backend for interaction languages such as Bend and Vine.
+## Interaction nets (Lafont, 1990)
+
+Interaction nets are a graphical calculus based on graph rewriting. They are a programming paradigm for deterministic distributed computation recently popularized by the Bend language. We review an Inet dialect prototype that generalizes turing machines, cellular automata, and a number of word or term rewriting systems.
+
+![](mazza.png)
 
 ---
 
 # Agenda
 
 * Interaction nets graphical calculus
-    * Universal model of computation
-        * deterministic distributed
-    * Lambda calculus
-    * Linear logic
-    * Turing machines
+    * Universal model of deterministic distributed computation
+    * Abstracts many variants of
+        * Lambda calculus
+        * Linear logic
+        * Turing machines
 * State of the art
     * Bend + HVM2
+        * GPU evaluation
     * Vine + IVM
-* Graph rewriting to normal form
-    * as compilation
-    * as runtime
-    * using GPUs
-* Technical deep dive
+* Graph rewriting deep dive
+    * Fully-local
+    * to normal form as compilation
+    * for evaluation at runtime
+    * SSA CFGs vs undirected combinator graphs
+* Implementation deep dive
     * Rewrite-based TableGen implementation
-    * SSA, CFGs vs undirected combinator graphs
-        * no explicit linking ops
+        * Decoupled from numeric or native types
+        * Operation-oriented
+    * Co-combinators
         * coalgebras vs active-aux ports
-    * decoupling from other dialects and native numbers
-* Extensions
-    * generalized algebraic dialect
-    * to graphical languages for monoidal categories
-* PR review
-    * Need regions?
-    * Multiple links to one port
-    * variadic auxiliary ports
-    * Non-terminating reductions
-    * Mixing with other dialects
+        * no explicit linking ops
+
+---
 
 # Objectives
 
 * Domain-specific compiler for combinator runtimes
+* Consider potential adoption versus maintenance cost
+
+---
+
+# Canonicalization
+
+* MLIR has a single canonicalization pass, which iteratively applies the canonicalization patterns of all loaded dialects in a greedy way: https://mlir.llvm.org/docs/Canonicalization. This is perfect for the fully-local graph rewriting approach in Inets.
+* It applies patterns until either fixpoint is reached or the maximum number of iterations/rewrites is exhausted.
+
+CHECK: Pattens with expensive running time (i.e. have O(n) complexity) or complicated cost models don’t belong to canonicalization: since the algorithm is executed iteratively until fixed-point we want patterns that execute quickly (in particular their matching phase).
+
+> Interaction and termination, which ensures that all reduction sequences are finite. Interaction nets are confluent "by construction". This is not the case in general for term rewriting systems. Termination however is not guaranteed for arbitrary interaction nets.
+> https://www.sciencedirect.com/science/article/pii/S0304397597000820.
+
+---
+
+# Future work
+
+* Explore MLIR dialect capabilities
+    * Regions
+    * Interfaces
+    * Properties
+    * Attributes
+    * Variadic types
+* Frontend language implementation
+* Generalized algebraic dialect
+    * Graphical monoidal languages
+* GPU runtime and compiler
 
 ---
 
