@@ -74,30 +74,50 @@ There is evidence of interest in YouTube programming channels, with videos for t
 
 ---
 
-# Canonicalization
+# Implementation deep dive
 
-* MLIR has a single canonicalization pass, which iteratively applies the canonicalization patterns of all loaded dialects in a greedy way: https://mlir.llvm.org/docs/Canonicalization. This is perfect for the fully-local graph rewriting approach in Inets.
-* It applies patterns until either fixpoint is reached or the maximum number of iterations/rewrites is exhausted.
+## Canonicalization
 
-CHECK: Pattens with expensive running time (i.e. have O(n) complexity) or complicated cost models don’t belong to canonicalization: since the algorithm is executed iteratively until fixed-point we want patterns that execute quickly (in particular their matching phase).
-
-> Interaction and termination, which ensures that all reduction sequences are finite. Interaction nets are confluent "by construction". This is not the case in general for term rewriting systems. Termination however is not guaranteed for arbitrary interaction nets.
-> https://www.sciencedirect.com/science/article/pii/S0304397597000820.
+MLIR has a single canonicalization pass, which iteratively applies the canonicalization patterns of all loaded dialects in a greedy way: https://mlir.llvm.org/docs/Canonicalization. This is perfect for the fully-local graph rewriting approach in Inets.
 
 ---
 
 # Future work
 
-* Explore MLIR dialect capabilities
-    * Regions
-    * Interfaces
-    * Properties
-    * Attributes
-    * Variadic types
-* Frontend language implementation
-* Generalized algebraic dialect
-    * Graphical monoidal languages
-* GPU runtime and compiler
+## Frontend language
+
+The prototype shows that the MLIR rewrite framework is capable of supporting graphical calculus with a straightforward term-rewriting approach. Implementors of frontend languages that want to hide the inet compilation backend could benefit from additional features:
+* Variadic types
+* Regions
+* Interfaces
+* Properties
+* Attributes
+---
+
+# Future work
+
+## Normalization
+
+In the present prototype the canonicalization pass doesn't detect when to stop the compile-time rewriting, also called prereduction, since the algorithm is executed iteratively until fixed-point. To support this, further work is needed to develop terminating normalization. https://www.sciencedirect.com/science/article/pii/S0304397597000820.
+
+---
+
+# Future work
+
+## Generalized algebraic dialect
+
+The prototype is self-contained and centered in the Interaction Net paradigm. Some parts of this implementation are realizations of co-algebraic and monoidal semantics that could form a more abstract dialect.
+
+Graphical monoidal languages have risen as demand from complex calculi like the ZX-calculus in quantum computing found them both foundationally solid and easy to reason graphically about.
+
+
+---
+
+# Future work
+
+## GPU compilation support
+
+The Interaction Net paradigm blurs the line between run- and compile-time. This means that the same techniques applied using the GPU runtime can also be considered at compilation time.
 
 ---
 
