@@ -54,6 +54,26 @@ Interaction nets are a graphical calculus based on graph rewriting. They are a p
 
 ---
 
+# State of the art
+
+## Bend
+Bend is the Python-inspired frontend language for the HVM2 interaction combinator evaluator. It compiles an Interaction Net syntactic tree to efficient CUDA based on its parallel model.
+
+## Vine
+Vine is the Rust-inspired frontend language for the IVM interaction combinator runtime. Vine is compiled to Ivy, the IVM low-level intermediate representation, syntactically similar to MLIR.
+
+---
+
+# State of the art
+
+## Community interest
+
+There is evidence of interest in YouTube programming channels, with videos for the Bend language with more than 1M views.
+
+![](bend-youtube.png){height=70%}
+
+---
+
 # Canonicalization
 
 * MLIR has a single canonicalization pass, which iteratively applies the canonicalization patterns of all loaded dialects in a greedy way: https://mlir.llvm.org/docs/Canonicalization. This is perfect for the fully-local graph rewriting approach in Inets.
