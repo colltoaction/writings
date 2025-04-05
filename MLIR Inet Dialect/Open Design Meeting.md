@@ -1,12 +1,12 @@
 ---
 title:
-- MLIR Inet Dialect
+- 'Inet Dialect: Declarative rewrite rules for interaction nets'
 author:
 - Martin Coll
 theme:
 - Copenhagen
 date:
-- Open Design Meeting - __/__/2025
+- MLIR Open Design Meeting - __/__/2025
 
 ---
 
@@ -22,35 +22,41 @@ Interaction nets (Lafont, 1990) are a graphical calculus based on graph rewritin
 
 # Agenda
 
-* Interaction nets graphical calculus
-    * Universal model of deterministic distributed computation
-    * Abstracts many variants of
-        * Lambda calculus
-        * Linear logic
-        * Turing machines
-* State of the art
-    * Bend + HVM2
-        * GPU evaluation
-    * Vine + IVM
-* Graph rewriting deep dive
-    * Fully-local
-    * to normal form as compilation
-    * for evaluation at runtime
-    * SSA CFGs vs undirected combinator graphs
-* Implementation deep dive
-    * Rewrite-based TableGen implementation
-        * Decoupled from numeric or native types
-        * Operation-oriented
-    * Co-combinators
-        * coalgebras vs active-aux ports
-        * no explicit linking ops
+1. Understand the graph-rewriting computation model applied to MLIR
+1. State of the art
+1. Evaluate [Declarative Rewrite Rules](https://mlir.llvm.org/docs/DeclarativeRewrites/) for the implementation of Interaction Nets
 
 ---
 
-# Objectives
+# Graph rewriting
 
-* Domain-specific compiler for combinator runtimes
-* Consider potential adoption versus maintenance cost
+## MLIR Declarative Rewrite Rules
+
+MLIR supports defining rewrite rules in a declarative manner via TableGen. Patterns provide a concise way to express graph rewriting as a pair of source pattern to match and resultant pattern. The declarative rewrite rule just contains the very essence of the rewrite. This makes it very easy to understand the pattern.
+
+---
+
+# Graph rewriting
+
+## Interaction Nets
+
+Interaction nets are one of many computation models based on graph rewriting. They are as general as lambda calculus or turing machines. 
+
+## Interaction Combinators
+
+A net is defined as an undirected graph of combinators and interaction rules between. The variant implemented is the Symmetric Interaction Combinators.
+
+---
+
+# Graph rewriting
+
+## Annihilations
+
+![](mazza-annihilations.png)
+
+## Commutations
+
+![](mazza-commutations.png)
 
 ---
 
@@ -68,17 +74,9 @@ Vine is the Rust-inspired frontend language for the IVM interaction combinator r
 
 ## Community interest
 
-There is evidence of interest in YouTube programming channels, with videos for the Bend language with more than 1M views.
+Considering potential adoption versus maintenance cost, there is evidence of interest in YouTube programming channels, with videos for the Bend language with more than 1M views.
 
 ![](bend-youtube.png){height=70%}
-
----
-
-# Implementation deep dive
-
-## Graph rewriting
-
-MLIR supports defining rewrite rules in a declarative manner via TableGen. Patterns provide a concise way to express graph rewriting as a pair of source pattern to match and resultant pattern. The declarative rewrite rule just contains the very essence of the rewrite. This makes it very easy to understand the pattern. https://mlir.llvm.org/docs/DeclarativeRewrites/.
 
 ---
 
@@ -99,7 +97,62 @@ Since Inets are defined in terms of undirected graphs, we adapt the solution to 
 
 The interaction combinator rules are implemented by pattern matching on co-algebraic operations: `CoErase(Erase)`, `CoConstruct(Construct)` and `CoDuplicate(Duplicate)` for annihilation, and `CoErase(Construct)`, `CoErase(Duplicate)`, `CoConstruct(Erase)`, `CoDuplicate(Construct)`, `CoDuplicate(Erase)` and `CoConstruct(Duplicate)` for commutation.
 
-![](rules.png)
+## CoErase(Erase) annihilation pattern
+
+```
+def CoEraseEraseAnnihilation :
+  Pattern<
+    (Inet_CoEraseOp (Inet_EraseOp)),
+    []>;
+```
+
+---
+
+# Implementation deep dive
+
+## Original CoErase(Erase) annihilation
+
+```
+func.func @coerase_erase_annihilation() -> () {
+  %a = inet.erase f64
+  inet.coerase f64 %a
+  return
+}
+```
+
+## Rewritten CoErase(Erase) annihilation
+
+```
+func.func @coerase_erase_annihilation() -> () {
+  return
+}
+```
+
+---
+
+# Implementation deep dive
+
+## Original CoConstruct(Duplicate) commutation
+
+```
+func.func @coconstruct_duplicate_commutation(%arg0 : f64, %arg1 : f64) -> (f64, f64) {
+  %a = inet.duplicate f64 %arg0 f64 %arg1 f64
+  %b, %c = inet.coconstruct f64 %a f64, f64
+  return %b, %c : f64, f64
+}
+```
+
+## Rewritten CoConstruct(Duplicate) commutation
+
+```
+func.func @coconstruct_duplicate_commutation(%arg0 : f64, %arg1 : f64) -> (f64, f64) {
+  %0:2 = inet.coconstruct f64 %arg0 f64, f64
+  %1:2 = inet.coconstruct f64 %arg1 f64, f64
+  %2 = inet.duplicate f64 %0#0 f64 %1#0 f64
+  %3 = inet.duplicate f64 %0#1 f64 %1#1 f64
+  return %2, %3 : f64, f64
+}
+```
 
 ---
 
