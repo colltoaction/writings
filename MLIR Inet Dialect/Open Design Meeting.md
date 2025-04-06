@@ -22,8 +22,8 @@ Interaction nets (Lafont, 1990) are a graphical calculus based on graph rewritin
 
 # Agenda
 
-1. Understand the graph-rewriting computation model applied to MLIR
-1. State of the art
+1. Understand the graph-rewriting computation model in the context of MLIR
+1. Review the state of the art in Interaction Nets compilers and runtimes
 1. Evaluate [Declarative Rewrite Rules](https://mlir.llvm.org/docs/DeclarativeRewrites/) for the implementation of Interaction Nets
 
 ---
@@ -77,6 +77,14 @@ Vine is the Rust-inspired frontend language for the IVM interaction combinator r
 Considering potential adoption versus maintenance cost, there is evidence of interest in YouTube programming channels, with videos for the Bend language with more than 1M views.
 
 ![](bend-youtube.png){height=70%}
+
+---
+
+# Implementation deep dive
+
+## Standalone dialect prototype
+
+The prototype shows that MLIR is capable of supporting graphical calculus with a straightforward graph-rewrite implementation. Being a standalone dialect with no dependencies on other dialects, native types or advanced features, it is a very general formal programming model for MLIR.
 
 ---
 
