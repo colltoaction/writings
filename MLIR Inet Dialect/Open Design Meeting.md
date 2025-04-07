@@ -2,7 +2,7 @@
 title:
 - 'Inet Dialect: Declarative rewrite rules for interaction nets'
 author:
-- Martin Coll
+- Martin Coll (@colltoaction)
 theme:
 - Copenhagen
 date:
@@ -14,13 +14,16 @@ date:
 
 ## Interaction nets
 
-Interaction nets (Lafont, 1990) are a graphical calculus based on graph rewriting. They are a programming paradigm for deterministic distributed computation recently popularized by the Bend language. We review an Inet dialect prototype that generalizes turing machines, cellular automata, and a number of word or term rewriting systems.
-
-## Interaction animations
-Check out these gifs and the [original video](https://www.youtube.com/watch?v=_uIGQ1biCXY) on a supported medium.
+Interaction nets (Lafont, 1990) are a graphical syntax for deterministic distributed programs. They are both visual and formally defined using graph-rewriting rules.
 
 ![](lafont-construct-duplicate-commutation.gif){width=160px}
 ![](lafont-construct-erase-annihilation.gif){width=160px}
+
+_Check out these gifs and the [original video](https://www.youtube.com/watch?v=_uIGQ1biCXY) on a supported medium._
+
+## Inet dialect
+
+We review the implementation of a lightweight dialect that supports formal programming at the core of MLIR.
 
 ---
 
@@ -54,13 +57,15 @@ A net is defined as an undirected graph of combinators and interactions between 
 
 # Graph rewriting
 
+These are the _all_ inet interaction rules we need:
+
 ## Annihilations
 
-![](mazza-annihilations.png)
+![](mazza-annihilations.png){height=100px}
 
 ## Commutations
 
-![](mazza-commutations.png)
+![](mazza-commutations.png){height=100px}
 
 ---
 
@@ -80,7 +85,7 @@ Vine is the Rust-inspired frontend language for the IVM interaction combinator r
 
 Considering potential adoption versus maintenance cost, there is evidence of interest in YouTube programming channels, with videos for the Bend language with more than 1M views.
 
-![](bend-youtube.png){height=70%}
+![](bend-youtube.png){height=200px}
 
 ---
 
@@ -168,14 +173,6 @@ func.func @coconstruct_duplicate_commutation(%arg0 : f64, %arg1 : f64) -> (f64, 
 
 ---
 
-# Implementation deep dive
-
-## Canonicalization
-
-MLIR has a single canonicalization pass, which iteratively applies the canonicalization patterns of all loaded dialects in a greedy way: https://mlir.llvm.org/docs/Canonicalization. This is perfect for the fully-local graph rewriting approach in Inets.
-
----
-
 # Future work
 
 ## Frontend language
@@ -192,35 +189,31 @@ The prototype shows that the MLIR rewrite framework is capable of supporting gra
 
 ## Normalization
 
-In the present prototype the canonicalization pass doesn't detect when to stop the compile-time rewriting, also called prereduction, since the algorithm is executed iteratively until fixed-point. To support this, further work is needed to develop terminating normalization. https://www.sciencedirect.com/science/article/pii/S0304397597000820.
+MLIR iteratively applies the canonicalization patterns in a greedy way. Inet rules are local and asynchronous ensuring this process is correct.
+
+Further work is required to implement terminating normalization for recursive patterns. https://www.sciencedirect.com/science/article/pii/S0304397597000820.
 
 ---
 
 # Future work
-
-## Generalized algebraic dialect
-
-The prototype is self-contained and centered in the Interaction Net paradigm. Some parts of this implementation are realizations of co-algebraic and monoidal semantics that could form a more abstract dialect.
 
 ## Graphical monoidal languages
-Monoidal languages have risen as demand from complex calculi like the ZX-calculus in quantum computing. They are mathematically solid and easy to reason about using graphical intuition.
 
+There is a surge of graphical languages, such as Interaction nets or the ZX-calculus in quantum computing. They are mathematically solid and easy to reason about using visual intuition.
+
+The growing demand for complex calculi in programming languages suggests looking at further abstractions for co-algebraic and monoidal semantics. https://arxiv.org/abs/0908.3347.
 
 ---
 
 # Future work
 
-## GPU compilation support
+## GPU-accelerated compilation
 
-The Interaction Net paradigm blurs the line between run- and compile-time. We see that HVM2 can compile a CUDA-based evaluator but we can also consider using the same techniques at compilation time.
-
----
-
-# Questions
+The Interaction Net paradigm blurs the line between run- and compile-time. We would like to explore how the GPU acceleration techniques can be used to implement the compilation processes.
 
 ---
 
-# Links
+# Links and questions
 
 * https://lipn.univ-paris13.fr/~mazza/papers/CombSem-MSCS.pdf
 * Interaction Nets (1990): https://dlnext.acm.org/doi/10.1145/96709.96718
