@@ -16,7 +16,11 @@ date:
 
 Interaction nets (Lafont, 1990) are a graphical calculus based on graph rewriting. They are a programming paradigm for deterministic distributed computation recently popularized by the Bend language. We review an Inet dialect prototype that generalizes turing machines, cellular automata, and a number of word or term rewriting systems.
 
-![](mazza.png)
+## Interaction animations
+Check out these gifs and the [original video](https://www.youtube.com/watch?v=_uIGQ1biCXY) on a supported medium.
+
+![](lafont-construct-duplicate-commutation.gif){width=160px}
+![](lafont-construct-erase-annihilation.gif){width=160px}
 
 ---
 
@@ -44,7 +48,7 @@ Interaction nets are one of many computation models based on graph rewriting. Th
 
 ## Interaction Combinators
 
-A net is defined as an undirected graph of combinators and interaction rules between. The variant implemented is the Symmetric Interaction Combinators.
+A net is defined as an undirected graph of combinators and interactions between them.
 
 ---
 
@@ -84,7 +88,7 @@ Considering potential adoption versus maintenance cost, there is evidence of int
 
 ## Standalone dialect prototype
 
-The prototype shows that MLIR is capable of supporting graphical calculus with a straightforward graph-rewrite implementation. Being a standalone dialect with no dependencies on other dialects, native types or advanced features, it is a very general formal programming model for MLIR.
+The prototype shows that MLIR is capable of supporting graphical calculus with a straightforward graph-rewrite approach. The implementation is a standalone dialect with no dependencies on other dialects, native types or advanced features, it is a very general formal programming model for MLIR.
 
 ---
 
