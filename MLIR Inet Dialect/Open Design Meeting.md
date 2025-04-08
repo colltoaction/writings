@@ -16,8 +16,9 @@ date:
 
 Interaction nets (Lafont, 1990) are a graphical syntax for deterministic distributed programs. They are both visual and formally defined using graph-rewriting rules.
 
-![](lafont-construct-duplicate-commutation.gif){width=160px}
-![](lafont-construct-erase-annihilation.gif){width=160px}
+![](lafont-construct-duplicate-commutation.gif){width=100px}
+![](lafont-construct-erase-annihilation.gif){width=100px}
+![](code-report-bend-thumbnail.png){width=100px}
 
 _Check out these gifs and the [original video](https://www.youtube.com/watch?v=_uIGQ1biCXY) on a supported medium._
 
