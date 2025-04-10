@@ -37,27 +37,15 @@ MLIR rewrite rules are defined in a declarative manner via TableGen. Patterns pr
 
 Interaction nets are one of many computation models based on graph rewriting. They are as general as lambda calculus or turing machines. 
 
-## Interaction Combinators
-
-A net is defined as an undirected graph of combinators and interactions between them.
-
----
-
-# Abstract
-
-## Inet dialect
-
-We review the implementation of a lightweight dialect that supports formal programming at the core of MLIR.
-
 ## Interaction nets
 
 Interaction nets (Lafont, 1990) are a graphical syntax for deterministic distributed programs. They are both visual and formally defined using graph-rewriting rules.
 
 ![](lafont-construct-duplicate-commutation.gif){width=100px}
-![](lafont-construct-erase-annihilation.gif){width=100px}
+![](lafont-construct-erase-commutation.gif){width=100px}
 ![](code-report-bend-thumbnail.png){width=186px}
 
-_Check out these gifs and the [original video](https://www.youtube.com/watch?v=_uIGQ1biCXY) on a supported medium._
+_Check out the original videos on a supported medium._
 
 ---
 
@@ -65,22 +53,30 @@ _Check out these gifs and the [original video](https://www.youtube.com/watch?v=_
 
 These are the _all_ inet interaction rules we need:
 
+## Commutations
+
+![](mazza-commutations.png){height=100px}
+
 ## Annihilations
 
 ![](mazza-annihilations.png){height=100px}
 
-## Commutations
+---
 
-![](mazza-commutations.png){height=100px}
+# Graph rewriting
+
+## Example
+
+![](mazza-example.png)
 
 ---
 
 # Prior art
 
-## Bend
+## HVM2 + Bend
 Bend is the Python-inspired frontend language for the HVM2 interaction combinator evaluator. It compiles an Interaction Net syntactic tree to efficient CUDA based on its parallel model.
 
-## Vine
+## IVM + Vine
 Vine is the Rust-inspired frontend language for the IVM interaction combinator runtime. Vine is compiled to Ivy, the IVM low-level intermediate representation, syntactically similar to MLIR.
 
 ---
@@ -99,7 +95,7 @@ Considering potential adoption versus maintenance cost, there is evidence of int
 
 ## Standalone dialect prototype
 
-The implementation is a standalone dialect with no dependencies on other dialects, native types or advanced MLIR features. Using only operations and patterns make ita very general formal programming model.
+We review the implementation of a lightweight dialect that supports formal programming at the core of MLIR. It is a standalone dialect with no dependencies on other dialects, native types or advanced MLIR features.
 
 ---
 
@@ -109,10 +105,34 @@ The implementation is a standalone dialect with no dependencies on other dialect
 
 The Inet dialect implements the three Symmetric Interaction Combinators `Erase`, `Construct` and `Duplicate` as operations.
 
-The inet evolves by matching pairs of active ports and rewriting the subgraph with both combinators according to the interaction rules.
+## Operations Example
+
+```
+func.func @example(%arg0 : f64, %arg1 : f64) -> f64 {
+  %a = inet.construct f64 %arg0 f64 %arg1 f64
+  %b = inet.duplicate f64 %arg0 f64 %arg1 f64
+  return %a + %b
+}
+```
+
+---
+
+# Implementation deep dive
 
 ## Co-operations
-Since Inets are defined in terms of undirected graphs, we adapt the solution to play nicely with MLIR's declarative DAG rewrite framework. The dialect includes the co-algebraic counterpart operations `CoErase`, `CoConstruct` and `CoDuplicate`. This greatly simplifies the definition of the rewrite patterns avoiding some of the limitations of this framework.
+
+Including co-algebraic operations `CoErase`, `CoConstruct` and `CoDuplicate` greatly simplifies the definition of the rewrite patterns. Since Inets are defined in terms of undirected graphs, these combinators are added to integrate with MLIR's directed graph rewrite framework.
+
+## Co-operations Example
+
+```
+func.func @coexample(%arg0 : f64, %arg1 : f64) -> f64 {
+  %a, %b = inet.coduplicate f64 %arg0 f64, f64
+  %c = inet.construct f64 %b f64 %arg1 f64
+  %d = inet.construct f64 %a f64 %c f64
+  return %d
+}
+```
 
 ---
 
@@ -227,4 +247,8 @@ The Interaction Net paradigm blurs the line between run- and compile-time. We wo
 * https://graphicallinearalgebra.net
 * String Diagram Rewrite Theory I: https://arxiv.org/abs/2012.01847
 * https://discopy.org
+* Lafont stop motion: https://www.youtube.com/watch?v=_uIGQ1biCXY
+* Fireship Code report: https://www.youtube.com/watch?v=HCOQmKTFzYY&t=7s
+* Primeagen review: https://www.youtube.com/watch?v=NaytZOiX3fs
 * __[Repo](https://github.com/colltoaction/writings/blob/main/MLIR%20Inet%20Dialect)__ with these slides
+* Meeting announcement: https://discourse.llvm.org/c/mlir/mlir-announcements/44
