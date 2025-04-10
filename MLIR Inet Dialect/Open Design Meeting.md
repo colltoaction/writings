@@ -85,7 +85,7 @@ Vine is the Rust-inspired frontend language for the IVM interaction combinator r
 
 ## Community interest
 
-Considering potential adoption versus maintenance cost, there is evidence of interest in YouTube programming channels, with videos for the Bend language with more than 1M views.
+There is evidence of interest in YouTube, with videos for the Bend language with more than 1M views.
 
 ![](bend-youtube.png){height=200px}
 
@@ -211,11 +211,25 @@ The prototype shows that the MLIR rewrite framework is capable of supporting gra
 
 # Future work
 
-## Normalization
+## Canonicalization
 
 MLIR iteratively applies the canonicalization patterns in a greedy way. Inet rules are local and asynchronous ensuring this process is correct.
 
-Further work is required to implement terminating normalization for recursive patterns. https://www.sciencedirect.com/science/article/pii/S0304397597000820.
+## Normalization
+
+Further work is required to implement terminating normalization for recursive patterns.
+
+---
+
+# Future work
+
+## Runtime
+
+The Interaction Net paradigm blurs the line between run- and compile-time. One would like to perform graph rewriting at runtime with the same computation model.
+
+## Compile time
+
+We would like to explore how the GPU acceleration techniques can be used to implement the compilation processes.
 
 ---
 
@@ -225,30 +239,19 @@ Further work is required to implement terminating normalization for recursive pa
 
 There is a surge of graphical languages, such as Interaction nets or the ZX-calculus in quantum computing. Monoidal languages stand out as they are mathematically solid and easy to reason about using visual intuition.
 
-The growing demand for complex calculi in programming languages suggests looking at further abstractions for these kind of semantics. https://arxiv.org/abs/0908.3347.
-
 ---
 
-# Future work
+# Links and open discussion
 
-## GPU-accelerated compilation
-
-The Interaction Net paradigm blurs the line between run- and compile-time. We would like to explore how the GPU acceleration techniques can be used to implement the compilation processes.
-
----
-
-# Links and questions
-
-* https://lipn.univ-paris13.fr/~mazza/papers/CombSem-MSCS.pdf
 * Interaction Nets (1990): https://dlnext.acm.org/doi/10.1145/96709.96718
 * Interaction Combinators (1997): https://www.sciencedirect.com/science/article/pii/S0890540197926432
+* Interaction nets and term-rewriting systems (1998): https://www.sciencedirect.com/science/article/pii/S0304397597000820
+* Symmetric Interaction Combinators (2007): https://lipn.univ-paris13.fr/~mazza/papers/CombSem-MSCS.pdf
+* A survey of graphical languages for monoidal categories (2009): https://arxiv.org/abs/0908.3347
 * https://github.com/higherorderco/hvm
 * https://github.com/VineLang/vine
-* https://graphicallinearalgebra.net
-* String Diagram Rewrite Theory I: https://arxiv.org/abs/2012.01847
-* https://discopy.org
 * Lafont stop motion: https://www.youtube.com/watch?v=_uIGQ1biCXY
 * Fireship Code report: https://www.youtube.com/watch?v=HCOQmKTFzYY&t=7s
 * Primeagen review: https://www.youtube.com/watch?v=NaytZOiX3fs
-* __[Repo](https://github.com/colltoaction/writings/blob/main/MLIR%20Inet%20Dialect)__ with these slides
-* Meeting announcement: https://discourse.llvm.org/c/mlir/mlir-announcements/44
+* Meeting announcement: https://discourse.llvm.org/t/open-mlir-meeting-april-10-2025-inet-interaction-nets-dialect/85763
+* These slides: https://github.com/colltoaction/writings/blob/main/MLIR%20Inet%20Dialect
