@@ -3,44 +3,31 @@ title:
 - 'Inet Dialect: Declarative rewrite rules for interaction nets'
 author:
 - Martin Coll (@colltoaction)
+institute:
+- University of Buenos Aires
 theme:
 - Copenhagen
 date:
-- MLIR Open Design Meeting - __/__/2025
-
----
-
-# Abstract
-
-## Interaction nets
-
-Interaction nets (Lafont, 1990) are a graphical syntax for deterministic distributed programs. They are both visual and formally defined using graph-rewriting rules.
-
-![](lafont-construct-duplicate-commutation.gif){width=100px}
-![](lafont-construct-erase-annihilation.gif){width=100px}
-![](code-report-bend-thumbnail.png){width=100px}
-
-_Check out these gifs and the [original video](https://www.youtube.com/watch?v=_uIGQ1biCXY) on a supported medium._
-
-## Inet dialect
-
-We review the implementation of a lightweight dialect that supports formal programming at the core of MLIR.
+- MLIR Open Design Meeting (April 10, 2025)
 
 ---
 
 # Agenda
 
-1. Understand the graph-rewriting computation model in the context of MLIR
-1. Review the state of the art in Interaction Nets compilers and runtimes
-1. Evaluate [Declarative Rewrite Rules](https://mlir.llvm.org/docs/DeclarativeRewrites/) for the implementation of Interaction Nets
+1. Understand graph-rewriting in the context of MLIR
+1. Review prior art in Interaction Nets compilers and runtimes
+1. Evaluate [Declarative Rewrite Rules](https://mlir.llvm.org/docs/DeclarativeRewrites/) in the implementation of the Inet dialect
 
 ---
 
 # Graph rewriting
 
-## MLIR Declarative Rewrite Rules
+## Term rewriting alternative
 
-MLIR supports defining rewrite rules in a declarative manner via TableGen. Patterns provide a concise way to express graph rewriting as a pair of source pattern to match and resultant pattern. The declarative rewrite rule just contains the very essence of the rewrite. This makes it very easy to understand the pattern.
+Graph-rewriting is an alternative to traditional term-rewriting compilers. At its core, MLIR provides a declarative graph-rewriting framework to implement multi-level compilers.
+
+## MLIR Declarative Rewrite Rules
+MLIR rewrite rules are defined in a declarative manner via TableGen. Patterns provide a concise way to express graph rewriting as a source pattern to match and a resultant pattern to replace with.
 
 ---
 
@@ -53,6 +40,24 @@ Interaction nets are one of many computation models based on graph rewriting. Th
 ## Interaction Combinators
 
 A net is defined as an undirected graph of combinators and interactions between them.
+
+---
+
+# Abstract
+
+## Inet dialect
+
+We review the implementation of a lightweight dialect that supports formal programming at the core of MLIR.
+
+## Interaction nets
+
+Interaction nets (Lafont, 1990) are a graphical syntax for deterministic distributed programs. They are both visual and formally defined using graph-rewriting rules.
+
+![](lafont-construct-duplicate-commutation.gif){width=100px}
+![](lafont-construct-erase-annihilation.gif){width=100px}
+![](code-report-bend-thumbnail.png){width=186px}
+
+_Check out these gifs and the [original video](https://www.youtube.com/watch?v=_uIGQ1biCXY) on a supported medium._
 
 ---
 
@@ -70,7 +75,7 @@ These are the _all_ inet interaction rules we need:
 
 ---
 
-# State of the art
+# Prior art
 
 ## Bend
 Bend is the Python-inspired frontend language for the HVM2 interaction combinator evaluator. It compiles an Interaction Net syntactic tree to efficient CUDA based on its parallel model.
@@ -80,7 +85,7 @@ Vine is the Rust-inspired frontend language for the IVM interaction combinator r
 
 ---
 
-# State of the art
+# Prior art
 
 ## Community interest
 
@@ -94,7 +99,7 @@ Considering potential adoption versus maintenance cost, there is evidence of int
 
 ## Standalone dialect prototype
 
-The prototype shows that MLIR is capable of supporting graphical calculus with a straightforward graph-rewrite approach. The implementation is a standalone dialect with no dependencies on other dialects, native types or advanced features, it is a very general formal programming model for MLIR.
+The implementation is a standalone dialect with no dependencies on other dialects, native types or advanced MLIR features. Using only operations and patterns make ita very general formal programming model.
 
 ---
 
@@ -102,7 +107,9 @@ The prototype shows that MLIR is capable of supporting graphical calculus with a
 
 ## Operations
 
-The Inet dialect implements the three Symmetric Interaction Combinators `Erase`, `Construct` and `Duplicate` as operations. The inet evolves by matching pairs of active ports and rewriting the subgraph with both combinators according to the interaction rules.
+The Inet dialect implements the three Symmetric Interaction Combinators `Erase`, `Construct` and `Duplicate` as operations.
+
+The inet evolves by matching pairs of active ports and rewriting the subgraph with both combinators according to the interaction rules.
 
 ## Co-operations
 Since Inets are defined in terms of undirected graphs, we adapt the solution to play nicely with MLIR's declarative DAG rewrite framework. The dialect includes the co-algebraic counterpart operations `CoErase`, `CoConstruct` and `CoDuplicate`. This greatly simplifies the definition of the rewrite patterns avoiding some of the limitations of this framework.
@@ -110,10 +117,6 @@ Since Inets are defined in terms of undirected graphs, we adapt the solution to 
 ---
 
 # Implementation deep dive
-
-## Patterns
-
-The interaction combinator rules are implemented by pattern matching on co-algebraic operations: `CoErase(Erase)`, `CoConstruct(Construct)` and `CoDuplicate(Duplicate)` for annihilation, and `CoErase(Construct)`, `CoErase(Duplicate)`, `CoConstruct(Erase)`, `CoDuplicate(Construct)`, `CoDuplicate(Erase)` and `CoConstruct(Duplicate)` for commutation.
 
 ## CoErase(Erase) annihilation pattern
 
@@ -123,6 +126,10 @@ def CoEraseEraseAnnihilation :
     (Inet_CoEraseOp (Inet_EraseOp)),
     []>;
 ```
+
+## Patterns
+
+The interaction combinator rules are implemented by pattern matching on co-algebraic operations: `CoErase(Erase)`, `CoConstruct(Construct)` and `CoDuplicate(Duplicate)` for annihilation, and `CoErase(Construct)`, `CoErase(Duplicate)`, `CoConstruct(Erase)`, `CoDuplicate(Construct)`, `CoDuplicate(Erase)` and `CoConstruct(Duplicate)` for commutation.
 
 ---
 
@@ -178,12 +185,8 @@ func.func @coconstruct_duplicate_commutation(%arg0 : f64, %arg1 : f64) -> (f64, 
 
 ## Frontend language
 
-The prototype shows that the MLIR rewrite framework is capable of supporting graphical calculus with a straightforward term-rewriting approach. Implementors of frontend languages that want to hide the inet compilation backend could benefit from additional features:
-* Variadic types
-* Regions
-* Interfaces
-* Properties
-* Attributes
+The prototype shows that the MLIR rewrite framework is capable of supporting graphical calculus with a straightforward graph-rewriting approach. The dialect adds this support to the backend but as of now there is no frontend language.
+
 ---
 
 # Future work
@@ -200,9 +203,9 @@ Further work is required to implement terminating normalization for recursive pa
 
 ## Graphical monoidal languages
 
-There is a surge of graphical languages, such as Interaction nets or the ZX-calculus in quantum computing. They are mathematically solid and easy to reason about using visual intuition.
+There is a surge of graphical languages, such as Interaction nets or the ZX-calculus in quantum computing. Monoidal languages stand out as they are mathematically solid and easy to reason about using visual intuition.
 
-The growing demand for complex calculi in programming languages suggests looking at further abstractions for co-algebraic and monoidal semantics. https://arxiv.org/abs/0908.3347.
+The growing demand for complex calculi in programming languages suggests looking at further abstractions for these kind of semantics. https://arxiv.org/abs/0908.3347.
 
 ---
 
