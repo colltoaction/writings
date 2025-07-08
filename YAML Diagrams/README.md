@@ -18,3 +18,9 @@ In this repository lives my work for Call for Papers:
 https://github.com/yaml-programming/diagrams
 
 This project gives an interoperable string diagram specification based on the YAML language. Using monoidal semantics it enriches this popular data language with programming capabilities. We publish the yaml-diagrams package that uses PyYAML and DisCoPy to generate, draw and compute string diagrams.
+
+# LaTeX packages
+## Ubuntu
+```sh
+sudo apt install texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-xetex
+```
