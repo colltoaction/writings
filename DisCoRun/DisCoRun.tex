@@ -1,0 +1,214 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.21 of 2022/01/12
+%
+\documentclass[runningheads]{llncs}
+%
+\usepackage{amsmath}
+%
+\usepackage[T1]{fontenc}
+% T1 fonts will be used to generate the final print and online PDFs,
+% so please use T1 fonts in your manuscript whenever possible.
+% Other font encondings may result in incorrect characters.
+%
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{minted}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following two lines
+% to display URLs in blue roman font according to Springer's eBook style:
+%\usepackage{color}
+%\renewcommand\UrlFont{\color{blue}\rmfamily}
+%\urlstyle{rm}
+%
+\usepackage[inkscapelatex=false]{svg}
+%
+% \usepackage[backend=biber,style=splncs04]{biblatex}
+% \bibliographystyle{splncs04}
+\usepackage[backend=biber]{biblatex}
+\bibliography{references}
+%
+%
+\begin{document}
+%
+\title{DisCoRun: An implementation of the Monoidal Computer and Run language in DisCoPy}
+%
+\titlerunning{DisCoRun}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{Mart\'in Coll\inst{1}\orcidID{0009-0009-0146-7132}}
+%
+\authorrunning{M. Coll.}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+\institute{Department of Computer Science, University of Buenos Aires, \email{mcoll@dc.uba.ar}, CABA, C1428EGA, Argentina}
+%
+\maketitle              % typeset the header of the contribution
+%
+\begin{abstract}
+% The abstract should briefly summarize the contents of the paper in
+% 150--250 words.
+
+We present DisCoRun, an implementation of the Monoidal Computer and Run language in DisCoPy~\cite{toumi2023discopyhierarchygraphicallanguages, de_Felice_2021}, released as the \texttt{discopy-run} package. Our design follows \emph{Programs as Diagrams}~\cite{pavlovic2023programsdiagramscategoricalcomputability}: programs are typed string diagrams equipped with cartesian data services (copy and delete), a distinguished program type with decidable equality, and a universal evaluator family.
+In our case study, we instantiate this evaluator for the POSIX Shell Command Language~\cite{posix-2024} using \texttt{subprocess.run}. In this interpretation, sequential composition (\texttt{>>}) realizes shell-style pipelines and monoidal tensor (\texttt{@}) models independent process branches. \texttt{Copy}, \texttt{Merge}, and \texttt{Trace} arise naturally from the monoidal computer representation, extending the Shell Command Language with primitive fan-out, fan-in, and feedback operators. The resulting system highlights the practical applications of categorical computability: developers can construct programs diagrammatically, analyze them compositionally, and translate them to a chosen target language.
+
+% We present an implementation of the Run language in DisCoPy, along side a practical universal evaluator for Operating System processes.
+% Following the theory of Programs as Diagrams, we write and publish a package 'discopy-computer', with the Computer, Program and Execution categories, Run morphism, and Compiler functor to move from an abstract program definition to a callable object in the category of Python functions provided by the framework.
+
+% treating programs as topological string diagrams captures both composition and correctness.
+
+% The Compiler functor maps morphisms to operating-system subprocesses through a functor into \texttt{discopy.python.Function}, where \texttt{subprocess.run} acts as a universal evaluator. In this setting, vertical composition (\texttt{>>}) models Unix-style pipelines, while the monoidal tensor (\texttt{@}) models parallel subprocess execution.
+% Symmetry and trace operators encode feedback and cyclic pipelines, and explicit fan-out/fan-in combinators realize practical IO multiplexing via \texttt{tee} and \texttt{cat}.
+
+% The result is a compact bridge between the Monoidal Computer theory and the execution of Python programs using DisCoPy.
+
+% By leveraging DisCoPy's diagrammatic tooling, the approach combines formal clarity with 
+
+% : developers can design, reason about programs graphically their behavior, and execute them with standard OS primitives. practical subprocess orchestration for high-concurrency pipeline design.
+
+
+
+\keywords{Categorical computability \and String diagram.}
+\end{abstract}
+%
+%
+%
+
+\section{Motivation}
+
+\paragraph{Graphical calculus}
+String diagrams provide a rigorous graphical calculus for monoidal categories~\cite{Selinger_2010}. Sequential composition is represented by vertical wiring, while tensor product is represented by horizontal juxtaposition. Additional structural features, such as symmetries and traces, are encoded topologically. Diagram deformations that preserve connectivity correspond to sound equational reasoning.
+
+\paragraph{Computing with string diagrams}
+This perspective motivates treating programs as diagrams~\cite{pavlovic2023programsdiagramscategoricalcomputability}. The universal evaluator is the central primitive from which sequential and parallel composition, and partial evaluation.
+DisCoRun operationalizes this approach on top of DisCoPy, the Python toolkit for monoidal categories. In this setting, diagrams are typed program objects that support composition, rewriting, and functorial interpretation into executable backends (e.g., Python functions). We instantiate this machinery with the monoidal computer interface of \emph{Programs as Diagrams}: \texttt{RUN} is the single primitive induced by the running surjection, while richer behaviors are derived by composing diagrams.
+
+
+% TODO "intentions" column on the left
+% with eq and diagram
+% \begin{figure}
+%      \centering
+%      \begin{subfigure}[b]{0.4\textwidth}
+%          \centering
+%         \begin{minted}{python}
+% Copy(3) >> (
+%     Command(["cat"]),
+%     Command(["grep", "-c", "x"]),
+%     Command(["wc", "-l"]),
+% ) >> Merge(3)
+%         \end{minted}
+%          \caption{The program equation.}
+%      \end{subfigure}
+%      \hfill
+%      \begin{subfigure}[b]{0.55\textwidth}
+%          \centering
+%          \includesvg[width=\textwidth]{merge-diagram.svg}
+%          \caption{The program diagram.}
+%      \end{subfigure}
+%     \caption{Diagrams imbue visual intuition with formal guarantees.}
+%     \label{fig1}
+% \end{figure}
+\begin{figure}[htbp]
+    \centering
+    % LEFT COLUMN: Stacked vertically
+    \begin{minipage}[c]{0.48\textwidth}
+         \begin{subfigure}[b]{\textwidth}
+             \centering
+            \begin{minted}{python}
+Copy(3)
+>> (
+    Command(["cat"]),
+    Command(["grep", "-c", "x"]),
+    Command(["wc", "-l"]),
+)
+>> Merge(3)
+            \end{minted}
+             \caption{Program equation.}
+         \end{subfigure}
+        
+        \vspace{0.5cm} % Vertical gap between the stacked items
+        
+        \begin{subfigure}{0.5\textwidth}
+            \centering
+            \includesvg[width=\textwidth]{parallel-diagram.abstract.svg}
+            \caption{Abstract program diagram.}
+            \label{fig:bottom_left}
+        \end{subfigure}
+    \end{minipage}
+    \hfill
+    % RIGHT COLUMN: Single tall item
+    \begin{minipage}[c]{0.45\textwidth}
+        \begin{subfigure}{\textwidth}
+            \centering
+            % Adjust height to match the combined height of the left column
+            \includesvg[width=\textwidth]{parallel-diagram.svg}
+            \caption{Runnable diagram}
+            \label{fig:right_side}
+        \end{subfigure}
+    \end{minipage}
+
+    \caption{Diagrams imbue visual intuition with formal guarantees.}
+    \label{fig:example1}
+\end{figure}
+
+\section{POSIX Shell Command Language Case Study}
+
+\subsection{Shell Evaluator}
+This case study instantiates the evaluator on \texttt{IO} wires using \texttt{subprocess.run}. Each command box denotes a POSIX command invocation interpreted as an \texttt{IO} transformer.
+
+\paragraph{Operators}
+Vertical composition (\texttt{>>}) models shell pipeline composition: the stdout stream of one command becomes the stdin stream of the next command.
+Monoidal tensor (\texttt{@}) denotes independent command branches at the diagram level, with the \texttt{fork} command as a close translation. The language also exposes three explicit structural operators: \texttt{Copy} for fan-out, \texttt{Merge} for fan-in, and \texttt{Trace} for feedback. These are diagrammatic extensions rather than native POSIX Shell Command Language constructs.
+
+\begin{table}
+\caption{Mapping of Categorical Operations to POSIX Shell Command Language Concepts}\label{tab1}
+\centering
+\begin{tabular}{|l|l|}
+\hline
+Categorical Operation & POSIX Shell Command Language Concept \\
+\hline
+Vertical Composition ($>>$) & Command pipelining (\texttt{|}) \\
+Monoidal Tensor ($@$) & Independent branches (e.g., \texttt{fork}) \\
+Copy & Stream fan-out (e.g., \texttt{tee}) \\
+Merge & Stream fan-in (e.g., \texttt{cat}) \\
+Trace & Feedback/cyclic wiring (outside POSIX grammar) \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{credits}
+\subsubsection{\ackname}
+M. Coll acknowledges public, tuition-free, and high-quality higher education, Ley 24.521.
+
+% \subsubsection{\discintname}
+% It is now necessary to declare any competing interests or to specifically
+% state that the authors have no competing interests. Please place the
+% statement with a bold run-in heading in small font size beneath the
+% (optional) acknowledgments\footnote{If EquinOCS, our proceedings submission
+% system, is used, then the disclaimer can be provided directly in the system.},
+% for example: The authors have no competing interests to declare that are
+% relevant to the content of this article. Or: Author A has received research
+% grants from Company W. Author B has received a speaker honorarium from
+% Company X and owns stock in Company Y. Author C is a member of committee Z.
+\subsubsection{\discintname}
+The authors have no competing interests to declare that are
+relevant to the content of this article.
+\end{credits}
+%
+% ---- Bibliography ----
+%
+% BibTeX users should specify bibliography style 'splncs04'.
+% References will then be sorted and formatted in the correct style.
+%
+% \bibliographystyle{splncs04}
+% \bibliography{mybibliography}
+%
+\printbibliography
+
+
+\end{document}
